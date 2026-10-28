@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ColdAlert Command Center</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+<div id="landing">
+  <div id="globe-host"><canvas id="globe-cv" aria-label="Globo terrestre interativo"></canvas></div>
+  <div class="l-over">
+    <div class="l-top">
+      <div><div class="l-brand"><b>COLDALERT</b> · EARTH INTELLIGENCE &amp; COLD RISK COMMAND CENTER</div></div>
+      <ul class="hud" id="hud"></ul>
+    </div>
+    <div class="l-mid"><div class="l-title">
+      <h1>COLD<span>ALERT</span></h1>
+      <p class="sub">Inteligência territorial para prevenção e resposta a eventos de frio extremo.</p>
+      <div class="l-ctas"><button class="btn primary" id="cta1">Acessar centro de comando</button><button class="btn" id="cta2">Explorar monitoramento territorial</button><button class="skip" id="skip" hidden>Pular animação</button></div>
+    </div></div>
+    <div class="l-bot">
+      <div class="l-note" id="stage-d" aria-live="polite"></div>
+      <div class="stages" id="stages"></div>
+      <div class="l-note">Protótipo. O globo não traz contornos de continentes (nenhuma fonte cartográfica está embutida). A iluminação solar é aproximada, e os marcadores usam coordenadas reais de cidades. Nenhum dado é em tempo real.</div>
+    </div>
+  </div>
+  <aside class="l-card" id="lcard" hidden></aside>
+</div>
+<div id="app" hidden>
+  <header class="topbar">
+    <button class="tb-b" id="navbtn" aria-label="Abrir navegação"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <button class="logo" id="logo" aria-label="Voltar ao globo"><i></i>COLD<span>ALERT</span></button>
+    <div class="tb-sys" title="Protótipo com dados simulados"><i></i>PROTÓTIPO · DADOS SIMULADOS</div>
+    <div class="tb-reg">São Bernardo do Campo — SP</div>
+    <div class="tb-sp"></div>
+    <div class="tb-clock" id="clock"></div>
+    <button class="tb-b" id="srcb" aria-expanded="false" aria-haspopup="true">Fontes</button>
+    <button class="tb-b" id="bell" aria-expanded="false" aria-haspopup="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 21h4"/></svg><span class="cnt" id="bellcnt" hidden></span></button>
+    <button class="tb-b" id="opb" aria-expanded="false" aria-haspopup="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span class="who">Operador Demo<small>Gestor (simulado)</small></span></button>
+    <button class="tb-b tb-wide" id="wide" aria-pressed="false" title="Alternar tela expandida">Tela expandida</button>
+  </header>
+  <nav class="side" id="side" aria-label="Módulos"></nav><div class="drawer-bg" id="dbg"></div>
+  <main id="main" tabindex="-1"></main>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/gis.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/globe.js"></script>
+<script src="js/views1.js"></script>
+<script src="js/views2.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
